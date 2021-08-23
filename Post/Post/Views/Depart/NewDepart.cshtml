@@ -1,0 +1,33 @@
+﻿@model Post.Models.Department
+
+@{
+    ViewData["Title"] = "NewDepart";
+    Layout = "~/Views/Shared/_SideLayout.cshtml";
+}
+<!--Alternatif olarak:
+<form asp-action="Department" method="post">
+    <br />
+    <b>Department Name</b>
+
+    <div>
+
+       <input asp-for="DepartName" />
+
+    </div>
+
+    <br />
+    <button type="button" class="btn btn-primary">Add Depart</button> // buttona işlevsellik vermem gerek
+-->
+
+
+
+<form class="form group" method="post">
+    <br />
+    <b> Department Name</b> 
+    @Html.TextBoxFor(x=> x.DepartName, new {@class ="form-control"})  
+    <br />
+    <button class="btn btn-info">Add Depart </button>
+
+
+</form>
+

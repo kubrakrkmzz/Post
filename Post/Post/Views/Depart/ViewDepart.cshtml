@@ -1,0 +1,20 @@
+﻿@model Post.Models.Department
+@{
+    ViewData["Title"] = "ViewDepart";
+    Layout = "~/Views/Shared/_SideLayout.cshtml";
+}
+
+@using (Html.BeginForm("UpdateDepart", "Depart", FormMethod.Post))
+{<!--Depart Controllerındaki ViewDepart ActionResultı post edilince çalıştır-->
+    
+    <b> Department ID</b>
+    @Html.TextBoxFor(x => x.DepartId, new { @class = "form-control" })
+    <br />
+    <b> Department Name</b>
+    @Html.TextBoxFor(x => x.DepartName, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-info" style="background-color:#006586">Update Depart </button>
+
+
+}
+

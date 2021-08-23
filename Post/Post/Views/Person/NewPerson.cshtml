@@ -1,0 +1,39 @@
+﻿@model Post.Models.Personal
+@{
+    ViewData["Title"] = "NewPerson";
+    Layout = "~/Views/Shared/_SideLayout.cshtml";
+}
+
+
+
+
+<form class="form group" method="post">
+    <br />
+    <b> Person UserName</b>
+    @Html.TextBoxFor(x => x.UserName, new { @class = "form-control" })
+    <br />
+    <b> Person Name</b>
+    @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
+    <br />
+    <b> Person Surname</b>
+    @Html.TextBoxFor(x => x.SurName, new { @class = "form-control" })
+    <br />
+    <b> Identification Number</b>
+    @Html.TextBoxFor(x => x.IdentificationNumber, new { @class = "form-control" })
+    <br />
+    <b> E-Mail</b>
+    @Html.TextBoxFor(x => x.Email, new {@class ="form-control"})
+    <br />
+    <b> Department </b>
+    @Html.DropDownListFor(x=> x.depart.DepartId,(List<SelectListItem>)ViewBag.dgr, new {@class = "form-control" })
+    <br />
+
+    <button class="btn btn-info">Add Person </button>
+
+
+
+
+
+
+</form>
+

@@ -1,0 +1,36 @@
+﻿@using Post.Models
+@model List<Personal>
+@{
+    ViewData["Title"] = "DetailsDepart";
+    Layout = "~/Views/Shared/_SideLayout.cshtml";
+}
+
+<br />
+
+<h2 style="color:forestgreen">@ViewBag.dptname Department</h2>
+<br />
+
+<table class="table table-bordered">
+    <tr>
+
+        <th>UserName</th>
+        <th>Name</th>
+        <th>Surname</th>
+        <th>IdentificationNumber</th>
+
+    </tr>
+
+    @foreach (var x in Model)
+    {
+        <tr>
+
+            <td>@x.UserName</td>
+            <td>@x.Name</td>
+            <td>@x.SurName</td>
+            <td>@x.IdentificationNumber</td>
+
+
+        </tr>
+    }
+</table>
+

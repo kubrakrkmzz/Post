@@ -1,0 +1,44 @@
+﻿@model IEnumerable<Post.Models.Department>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_SideLayout.cshtml";
+}
+<br />
+<table class="table table-bordered">
+
+    <tr>
+        <!--Tablo satırı tutar-->
+
+        <th>ID</th>
+        <th>Department</th>
+        <th>Delete</th>
+        <th>Update</th>
+        <th>Details</th>
+    </tr>
+
+    @foreach (Post.Models.Department x in Model)
+    {
+        <tr>
+            <td>@x.DepartId</td>
+            <td>@x.DepartName</td>
+            <td><a href="DeleteDepart/@x.DepartId"class="btn btn-danger">Delete</a></td>
+            <td><a href="ViewDepart/@x.DepartId"class="btn btn-success">Update</a></td>
+            <td><a href="DetailsDepart/@x.DepartId"class="btn btn-outline-dark" style="background-color:#f3dd61 ">Details</a></td>
+           
+        </tr>
+
+    }
+
+
+    <!-- alternatifleri foreach(var x in Model)
+            {
+        <tr>
+            <td>x.DepartId</td> başlarında et işareti olucak tabi
+            <td>x.DepartName</td>
+
+        </tr>
+    }-->
+
+</table>
+<a href ="/Depart/NewDepart/" class="btn btn-primary">New Department</a>

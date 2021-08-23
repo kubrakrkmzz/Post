@@ -56,7 +56,7 @@ namespace Post
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    pattern: "{controller=Depart}/{action=Index}/{id?}");
             });
         }
     }

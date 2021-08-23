@@ -9,6 +9,7 @@ namespace Post.Data
             : base(options) 
         { 
         }
-        public DbSet<Users> Users { get; set; }
-     }
+        public DbSet<Personal> Personals { get; set; }
+        public DbSet<Department> Departments { get; set; }
+    }
 }

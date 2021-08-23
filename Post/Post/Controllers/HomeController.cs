@@ -1,11 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Post.Models;
-using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
 using Post.Data;
 
 namespace Post.Controllers
@@ -35,7 +31,7 @@ namespace Post.Controllers
              _context.Users.Add(a);
              _context.SaveChanges();*/
 
-            _context.Users.Add(new Users
+         /*  _context.Users.Add(new Users
             {
                 UserName = "addsdsa",
                 Name = "adass",
@@ -52,7 +48,7 @@ namespace Post.Controllers
             List<Users> usera =_context.Users.Where(x => x.Name.Equals("Kubra") && x.UserName=="Kkmaz").ToList();
             //var user = _context.Users.Where(x => x.Name == "Kubra" && x.UserName == "Kkmaz").ToList(); Aynı şey yukarıdakiyle
             //Equals ve çift eşittir aynı
-
+         */
 
 
             return View();

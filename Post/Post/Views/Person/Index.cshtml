@@ -1,0 +1,41 @@
+﻿@using Post.Models
+@model List<Personal>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_SideLayout.cshtml";
+}
+
+<br />
+
+<table class="table table-bordered">
+    <tr>
+        
+        <th>UserName</th>
+        <th>Name</th>
+        <th>Surname</th>
+        <th>IdentificationNumber</th>
+        <th>E-mail</th>
+        <th>Department</th>
+        <th>Delete</th>
+        <th>Update</th>
+    </tr>
+
+    @foreach(var x in Model)
+            {
+<tr>
+    
+    <td>@x.UserName</td>
+    <td>@x.Name</td>
+    <td>@x.SurName</td>
+    <td>@x.IdentificationNumber</td>
+    <td>@x.Email</td>
+    <td>@x.depart.DepartName</td>
+    <td><a href="/Depart/DeleteDepart/@x.Id" class="btn btn-danger">Delete</a></td>
+    <td><a href="/Depart/ViewDepart/@x.Id" class="btn btn-success">Update</a></td>
+
+
+</tr>
+            }
+</table>
+<a href="/Person/NewPerson/" class="btn btn-primary">New Person</a>
+
